@@ -43,10 +43,7 @@ def blackjack():
             # 檢查是否為 A+J, A+Q 或 A+K
             if len(user_cards) == 2 and 11 in user_cards and 10 in user_cards:
                 print("你獲勝！完美黑傑克！(A+J/Q/K)")
-            else:
-                print("你獲勝！黑傑克！")
             return
-
         elif user_score > 21:
             print("你爆牌了，電腦獲勝！")
             return
