@@ -35,6 +35,10 @@ def blackjack():
         print(f"你的牌: {user_cards} (總點數: {user_score})")
         print(f"電腦的第一張牌: {computer_cards[0]}")
         
+        if user_cards < 21 and len(user_cards) == 7:
+            print("你獲勝！黑傑克！(抽五張都能不爆 有點東西)")
+            return
+        
         if user_score == 21:
             # 檢查是否為 A+J, A+Q 或 A+K
             if len(user_cards) == 2 and 11 in user_cards and 10 in user_cards:
