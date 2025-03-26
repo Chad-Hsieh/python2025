@@ -42,10 +42,7 @@ def blackjack():
             else:
                 print("你獲勝！黑傑克！")
             return
-        
-        if user_score == 21:
-            print("你獲勝！黑傑克！")
-            return
+
         elif user_score > 21:
             print("你爆牌了，電腦獲勝！")
             return
