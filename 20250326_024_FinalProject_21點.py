@@ -1,7 +1,6 @@
 import random
 
 def draw_card():
-    """隨機抽一張牌，A 計為 11，但稍後可以變為 1"""
     card = random.choice(["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"])
     if card in ["J", "Q", "K"]:
         return 10
@@ -11,7 +10,6 @@ def draw_card():
         return int(card)
 
 def calculate_score(cards):
-    """計算手牌總點數，並處理 A 的轉換"""
     score = sum(cards)
     ace_count = cards.count(11)  # 計算 A 的數量
     while score > 21 and ace_count > 0:
